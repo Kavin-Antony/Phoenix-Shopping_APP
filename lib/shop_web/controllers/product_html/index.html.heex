@@ -1,2 +1,7 @@
 <h1> This is the product listing page</h1>
 <p class="mt-8">Selected console: <%= @console %> </p>
+<h3 :if={@promo}>You have a promotional code </h3>
+
+<a href={~p"/?#{[console: "xbox", admin: true, promo: "secret-code"]}"}>Go back to home</a>
+
+<p> This is the full url: <%= url(~p"/products")%></p>

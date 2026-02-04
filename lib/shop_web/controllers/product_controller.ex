@@ -4,6 +4,8 @@ defmodule ShopWeb.ProductController do
   def index(conn, _params) do
     # dbg(params)
     render(conn, :index)
+    # conn
+    # |> redirect(to: ~p"/wrong")
   end
 
   def show(conn, %{"id" => id}) do
