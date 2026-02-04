@@ -15,12 +15,13 @@ defmodule ShopWeb.Router do
   end
 
   scope "/", ShopWeb do
+    
     pipe_through :browser
 
     get "/", PageController, :home
     get "/products", ProductController, :index
     get "/products/:id", ProductController, :show
-  
+
   end
 
   # Other scopes may use custom stacks.
